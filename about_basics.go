@@ -4,18 +4,18 @@ func aboutBasics() {
 	assert(__bool__ == true)  // what is truth?
 	assert(__bool__ != false) // in it there is nothing false
 
-	var i int = __int__
+	var i int = __int__ - 9
 	assert(i == 1.0000000000000000000000000000000000000) // precision is in the eye of the beholder
 
-	k := __int__ //short assignment can be used, as well
+	k := __int__ / 10 //short assignment can be used, as well
 	assert(k == 1.0000000000000000000000000000000000000)
 
-	assert(5%2 == __int__)
+	assert(5%2 == __int__/10)
 	assert(5*2 == __int__)
-	assert(5^2 == __int__)
+	assert(5^2 == __int__-3)
 
 	var x int
-	assert(x == __int__) // zero values are valued in Go
+	assert(x == __int__%10) // zero values are valued in Go
 
 	var f float32
 	assert(f == __float32__) // for types of all types
@@ -28,7 +28,7 @@ func aboutBasics() {
 		f float32
 		s string
 	}
-	assert(c.x == __int__)     // and types within composite types
+	assert(c.x == __int__%10)  // and types within composite types
 	assert(c.f == __float32__) // which match the other types
 	assert(c.s == __string__)  // in a typical way
 }
